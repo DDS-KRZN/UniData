@@ -36,5 +36,20 @@ public class Student extends Person{
     public void setFormOfEducation(String formOfEducation) {
         this.formOfEducation = formOfEducation;
     }
+
+    public String toString() {
+        String isBudgetText;
+        if (this.isBudget()==true){
+            isBudgetText = "Державне замовлення";
+        }
+        else {
+            isBudgetText = "Контракт";
+        }
+        /*return "\n"+(i+1)+". "+students[i].getSurname()+" "+students[i].getName()+" "+students[i].getPatronymic()+
+                " / "+students[i].getAge()+" ("+students[i].getFaculty()+", "+students[i].getCourse()+", "
+                +students[i].getFormOfEducation()+", "+isBudgetText+") ("+students[i].getPhoneNumber()+" / "+
+                students[i].getEmailCorporate()+")";*/
+        return (this.getName()+" "+this.getSurname()+" "+this.getPatronymic()+" / "+this.getAge()+"( "+this.getFaculty()+", "+this.getCourse()+", "+this.getFormOfEducation()+", "+isBudgetText+") ("+this.getPhoneNumber()+" / "+this.getEmailCorporate()+")");
+    }
 }
 

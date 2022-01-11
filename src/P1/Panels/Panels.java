@@ -81,5 +81,12 @@ public class Panels implements ActionListener {
             new AddStudentPanel(true, studentArrayList);
             studentCount++;
         }
+        else if (e.getSource() == addStudentButton && (studentCount+1)>=100){
+            JOptionPane.showMessageDialog(null,"Ви додали максимальну кількість студентів!", "Помилка", JOptionPane.ERROR_MESSAGE);
+        }
+        ///
+        else if (e.getSource() == StudentListButton){
+            new PrintStudentsList(studentCount, studentArrayList);
+        }
     }
 }
