@@ -49,7 +49,7 @@ public class Student extends Person{
                 " / "+students[i].getAge()+" ("+students[i].getFaculty()+", "+students[i].getCourse()+", "
                 +students[i].getFormOfEducation()+", "+isBudgetText+") ("+students[i].getPhoneNumber()+" / "+
                 students[i].getEmailCorporate()+")";*/
-        return (this.getName()+" "+this.getSurname()+" "+this.getPatronymic()+" / "+this.getAge()+"( "+this.getFaculty()+", "+this.getCourse()+", "+this.getFormOfEducation()+", "+isBudgetText+") ("+this.getPhoneNumber()+" / "+this.getEmailCorporate()+")");
+        return (this.getName()+" "+this.getSurname()+" "+this.getPatronymic()+" / "+this.getAge()+" ("+this.getFaculty()+", "+this.getCourse()+", "+this.getFormOfEducation()+", "+isBudgetText+") ("+this.getPhoneNumber()+" / "+this.getEmailCorporate()+")");
     }
 }
 

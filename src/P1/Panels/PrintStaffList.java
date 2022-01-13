@@ -1,22 +1,21 @@
 package P1.Panels;
 
-import People.Student;
+import People.Staff;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class PrintStudentsList {
-    ArrayList<Student> students;
-    public PrintStudentsList(int studentCount, ArrayList<Student> students){
-        this.students = students;
+public class PrintStaffList {
+    ArrayList<Staff> staffs;
+    public PrintStaffList(int staffCount, ArrayList<Staff> staffs){
+        this.staffs = staffs;
         StringBuilder text = new StringBuilder();
-        //for (int i = 0; i < studentCount; i++){
         int i = 1;
-        for (Student student: students){
-            text.append(i+". "+student+"\n");
+        for (Staff staff: staffs){
+            text.append(i+". "+staff+"\n");
             i++;
         }
-        if (studentCount!=0){
+        if (staffCount!=0){
             JOptionPane.showMessageDialog(null, text.toString(), "Список студентів", JOptionPane.INFORMATION_MESSAGE);
         }
         else {

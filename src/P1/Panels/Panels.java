@@ -77,16 +77,19 @@ public class Panels implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == addStudentButton && (studentCount+1)!=100){
-            new AddStudentPanel(true, studentArrayList);
+        if (e.getSource() == addStudentButton ){
+            new AddStudentPanel(true, studentArrayList, studentCount);
             studentCount++;
         }
-        else if (e.getSource() == addStudentButton && (studentCount+1)>=100){
-            JOptionPane.showMessageDialog(null,"Ви додали максимальну кількість студентів!", "Помилка", JOptionPane.ERROR_MESSAGE);
+        else if (e.getSource() == addStaffButton){
+            new AddStaffPanel(true, staffArrayList, staffCount);
+            staffCount++;
         }
-        ///
         else if (e.getSource() == StudentListButton){
             new PrintStudentsList(studentCount, studentArrayList);
+        }
+        else if (e.getSource() == StaffListButton){
+            new PrintStaffList(staffCount, staffArrayList);
         }
     }
 }
